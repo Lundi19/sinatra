@@ -9,6 +9,7 @@ require "sinatra/reloader" if development?
 #   "Message to mike"
 # end
 
-get '/cat' do
-  erb(:index)
+get '/named-cat' do
+  @name = params[:name]
+  erb :index
 end
